@@ -59,7 +59,7 @@ Requirements:
 - 5+ years of experience in software
 - Proficiency in JavaScript, Node.js, and React.
 - Strong understanding of web development principles and best practices.
-- Experience with RESTful APIs and third-party
+- Experience with RESTful APIs and third-party integrations.
 `
 
 module.exports = {
