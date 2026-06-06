@@ -45,7 +45,10 @@ const interviewReportSchema = new mongoose.Schema({
     preparationPlan: [preparationPlanSchema],
     user:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'users',
+        ref: 'users'
+    },
+    title:{
+        type: String,
         required: true
     }
 }, { 

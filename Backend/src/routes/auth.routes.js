@@ -9,7 +9,6 @@ const authUser = require('../middlewares/auth.middleware');
 *@desc Register a new user
 *@access Public
 */
-
 authRouter.post('/register', authController.registerUserController);
 
 /**
