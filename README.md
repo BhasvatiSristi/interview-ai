@@ -63,6 +63,7 @@ flowchart LR
 
 - `server.js` boots the application, loads environment variables, connects to MongoDB, and starts the server on port `3000`.
 - `src/app.js` configures Express middleware and registers the API routes.
+- `src/config/database.js` connects to the MongoDb database.
 - `src/routes/` defines auth and interview endpoints.
 - `src/controllers/` contains the request handlers.
 - `src/middlewares/` contains authentication and file upload middleware.
