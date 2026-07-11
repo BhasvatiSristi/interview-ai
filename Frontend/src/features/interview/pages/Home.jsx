@@ -112,7 +112,7 @@ const Home = () => {
                                                 marginTop: "10px"
                                             }}
                                         >
-                                            ✓ Ready to analyze
+                                            ✓ File Uploaded
                                         </p>
                                     </>
                                 ) : (

@@ -10,6 +10,7 @@ const Protected = ({children}) =>{
         return (<main><h1>Loading..</h1></main>)
     }
 
+    //if the user is not logged In(not present) we will redirect them to login page
     if(!user){
         return <Navigate to="/login" />
     }

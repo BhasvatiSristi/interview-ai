@@ -19,10 +19,10 @@ async function generateInterViewReportController(req, res) {
             });
         }
 
-        if (!req.file || !selfDescription.trim()) {
+        if (!req.file && !selfDescription.trim()) {
             return res.status(400).json({
                 message:
-                    "Please provide a resume and self description."
+                    "Either a resume or self description is required."
             });
         }
 
