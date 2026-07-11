@@ -20,7 +20,7 @@ async function registerUserController(req,res){
         $or:[{username},{email}]
     })
     if(isUserPresent){
-        return res.status(400).json({message:"User already exists"})
+        return res.status(400).json({message:"User already exists. Please login to continue."})
     }
 
     const hashedPassword = await bcrypt.hash(password,10);
@@ -90,8 +90,10 @@ async function loginUserController(req,res){
 async function logoutUserController(req,res){
     const token = req.cookies.token;
     if(token){
+        //blacklisting the token cause the token will be alive till it expires
         await tokenBlacklistModel.create({token})
     }
+    //clearing the token from cookie
     res.clearCookie("token");
     res.status(200).json({message:"User logged out successfully"})
 }
